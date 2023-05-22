@@ -1,0 +1,21 @@
+--Create a Pet Food database
+
+CREATE TABLE PetFood (id INTEGER PRIMARY KEY, Animal TEXT, Price INTEGER , Quanity INTEGER);
+
+INSERT INTO PetFood VALUES
+
+(1, "Cat", 12, 3),
+(2,  "Bird", 3, 4),
+(3, "Fish" , 1, 1),
+(4, "Dogs" , 15, 5),
+(5, "Hamsters", 8, 2);
+
+SELECT * FROM PetFood;
+
+--Display the database ordered by Quanity Purchased.
+
+SELECT * FROM PetFood ORDER BY Quanity; 
+
+--What is the Total Quanity of items  sold in Quanity Section?
+
+SELECT Sum (Quanity) FROM PetFood ORDER BY Animal;
