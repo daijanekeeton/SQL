@@ -1,0 +1,25 @@
+List Customers (their full names, customer ID, and country) who are not in the US. 
+
+SELECT FirstName, LastName, CustomerId, Country 
+FROM chinook.customers 
+WHERE Country = "USA";
+
+List only the Customers from Brazil.
+
+SELECT * FROM chinook.customers 
+WHERE Country = "Brazil" ;
+
+Show the Employees who are Sales Agents.
+
+SELECT * FROM chinook.Employees
+WHERE Title = "Sales Support Agent" ;
+
+Find a uniquet list of billing countries from the Invoice table.
+
+SELECT DISTINCT BillingCountry FROM chinook.Invoices ;
+
+What are the total sales for 2009?
+
+SELECT SUM(Total)
+FROM chinook.Invoices
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31';
